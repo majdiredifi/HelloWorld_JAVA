@@ -1,0 +1,15 @@
+name: Test VM Runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Run a test command
+        run: echo "Hello from Oracle VM!"
